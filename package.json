@@ -1,0 +1,99 @@
+{
+  "name": "serve-markdown-it-lib",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Shared utility library for serve-markdown-it",
+  "author": "Cris Mihalache <me@f3rno.com>",
+  "main": "index.js",
+  "engines": {
+    "node": ">=11.14.0"
+  },
+  "files": [
+    "*.md",
+    "*.js",
+    "lib/**"
+  ],
+  "directories": {
+    "lib": "lib"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/f3rno/serve-markdown-it-lib.git"
+  },
+  "homepage": "https://github.com/f3rno/serve-markdown-it-lib",
+  "bugs": {
+    "url": "https://github.com/f3rno/serve-markdown-it-lib/issues"
+  },
+  "keywords": [
+    "utility",
+    "sermit",
+    "sermit-config",
+    "sermit-template",
+    "serve-markdown-it"
+  ],
+  "scripts": {
+    "docs": "rm -rf DOCUMENTATION.md && ./node_modules/.bin/jsdoc2md -f index.js 'lib/**/*.js' > DOCUMENTATION.md",
+    "gen-readme": "rm README.md && node scripts/gen_readme.js",
+    "lint": "./node_modules/.bin/eslint package.json '*.js' lib test",
+    "release": "npm run update-version && git push origin master --follow-tags && npm publish",
+    "test": "npm run lint && npm run unit",
+    "unit": "NODE_ENV=test ./node_modules/.bin/nyc ./node_modules/.bin/mocha --recursive",
+    "update-deps": "./node_modules/.bin/updates -u -p -c",
+    "update-version": "./node_modules/.bin/standard-version"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "colors": "^1.4.0",
+    "ignore": "^5.1.8",
+    "lodash": "^4.17.15",
+    "mime-types": "^2.1.27",
+    "p-iteration": "^1.1.8",
+    "resolve-global": "^1.0.0",
+    "sass": "^1.26.9",
+    "signale": "^1.4.0"
+  },
+  "devDependencies": {
+    "@f3rno/eslint-config": "^1.1.7",
+    "babel-eslint": "^10.1.0",
+    "chai": "^4.2.0",
+    "eslint": "^7.3.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-babel": "^5.3.0",
+    "eslint-plugin-classes": "^0.1.1",
+    "eslint-plugin-clean-regex": "^0.4.0",
+    "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsdoc": "^28.5.1",
+    "eslint-plugin-lodash": "^7.1.0",
+    "eslint-plugin-mocha": "^7.0.1",
+    "eslint-plugin-mocha-cleanup": "^1.8.0",
+    "eslint-plugin-new-with-error": "^2.0.0",
+    "eslint-plugin-no-module-mutate": "^1.0.0",
+    "eslint-plugin-no-smart-quotes": "^1.1.0",
+    "eslint-plugin-no-useless-assign": "^1.0.3",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-package-json": "^0.1.4",
+    "eslint-plugin-private-props": "^0.3.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-promise-catch": "^1.0.1",
+    "eslint-plugin-security": "^1.4.0",
+    "eslint-plugin-sonarjs": "^0.5.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-strict-newline": "^1.3.0",
+    "eslint-plugin-switch-case": "^1.1.2",
+    "eslint-plugin-unicorn": "^20.1.0",
+    "eslint-plugin-unused-imports": "^0.1.3",
+    "eslint-plugin-why": "^1.2.0",
+    "husky": "^4.2.5",
+    "jsdoc-to-markdown": "^6.0.1",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "standard-version": "^8.0.0",
+    "updates": "^10.2.15"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test && yarn docs && yarn gen-readme && git add README.md DOCUMENTATION.md"
+    }
+  }
+}
