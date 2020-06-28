@@ -1,6 +1,6 @@
 {
   "name": "serve-markdown-it-lib",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "description": "Shared utility library for serve-markdown-it",
   "author": "Cris Mihalache <me@f3rno.com>",
