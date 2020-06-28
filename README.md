@@ -114,7 +114,7 @@ Renders a map of `{ [dest]: src }` path pairs representing static assets,
 either files or folders.
 
 **Kind**: global function  
-**Returns**: <code>Promise</code> - p - resolves to array of asset file buffers.  
+**Returns**: <code>Promise</code> - p  
 
 | Param | Type | Description |
 | --- | --- | --- |
