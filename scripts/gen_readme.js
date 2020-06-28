@@ -9,7 +9,7 @@ const { getLogger } = require('../')
  */
 const getPath = p => path.join(__dirname, '../', p)
 
-const TEMPLATE_SRC = '.template.README.md'
+const TEMPLATE_SRC = '.README.md'
 const TEMPLATE_DST = 'README.md'
 const API_SRC = ['*.js', 'lib/**'].map(getPath)
 

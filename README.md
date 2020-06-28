@@ -1,9 +1,10 @@
 # serve-markdown-it-lib
 
-[![Build Status](https://travis-ci.org/f3rno/serve-markdown-it-lib.svg?branch=master)](https://travis-ci.org/f3rno/serve-markdown-it-lib)
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Downloads Stats][npm-downloads]][npm-url]
 
-> Shared utility library for
-**[`sermit`](https://github.com/f3rno/serve-markdown-it)**
+Shared utility library for **[sermit](https://github.com/f3rno/serve-markdown-it)**
 
 ### [Installation](#installation)
 ![npm badge](https://nodei.co/npm/serve-markdown-it-lib.png?downloads=true&downloadRank=true&stars=true)
@@ -21,8 +22,13 @@ yarn test // lint & mocha
 yarn update-deps // bump all deps
 ```
 
-### License
-**[MIT](https://choosealicense.com/licenses/mit/)**
+### [Release History](#release_history)
+
+See *[CHANGELOG.md](CHANGELOG.md)* for more information.
+
+### [License](#license)
+
+Distributed under the **MIT** license. See [LICENSE.md](LICENSE.md) for more information.
 
 ### [Contributing](#contributing)
 
@@ -31,8 +37,6 @@ yarn update-deps // bump all deps
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
-
-> _[CHANGELOG](CHANGELOG.md)_
 
 ---
 
@@ -303,3 +307,10 @@ const parserPlugin = requireDynamicModule('markdown-it-anchor', config, true)
 | type | <code>string</code> | mime type, defaults to 'text/plain' if not   resolved. |
 
 
+
+<!-- Markdown link & img dfn's -->
+[npm-image]: https://img.shields.io/npm/v/serve-markdown-it-lib.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/serve-markdown-it-lib
+[npm-downloads]: https://img.shields.io/npm/dm/serve-markdown-it-lib.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/f3rno/serve-markdown-it-lib/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/f3rno/serve-markdown-it-lib
