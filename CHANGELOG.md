@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.5](https://github.com/f3rno/serve-markdown-it-lib/compare/v1.0.4...v1.0.5) (2020-07-04)
+
+
+### Bug Fixes
+
+* prefer greatest dep ver in update-deps ([54b5c38](https://github.com/f3rno/serve-markdown-it-lib/commit/54b5c380663e45b1bd06057b10638d3da52b7fb2))
+
 ### [1.0.4](https://github.com/f3rno/serve-markdown-it-lib/compare/v1.0.3...v1.0.4) (2020-06-28)
 
 
